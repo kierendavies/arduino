@@ -15,14 +15,14 @@ Setting the timer on the Arduino
 --------------------------------
 
 Buttons, left to right:
-0. Change intensity
-1. Increment hours
-2. Decrement hours
-3. Increment minutes
-4. Decrement minutes
-5. Increment seconds
-6. Decrement seconds
-7. Start
+1. Change intensity
+2. Increment hours
+3. Decrement hours
+4. Increment minutes
+5. Decrement minutes
+6. Increment seconds
+7. Decrement seconds
+8. Start
 
 Setting the timer through serial
 --------------------------------
