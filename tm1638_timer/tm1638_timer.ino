@@ -83,7 +83,14 @@ void displayTime(long time) {  // in milliseconds
 }
 
 void alarm() {
-  digitalWrite(buzzerPin, HIGH);
-  delay(20);
-  digitalWrite(buzzerPin, LOW);
+  for (int i = 0; i < 8; i++) {
+    digitalWrite(buzzerPin, HIGH);
+    delay(200);
+    digitalWrite(buzzerPin, LOW);
+    delay(100);
+    digitalWrite(buzzerPin, HIGH);
+    delay(200);
+    digitalWrite(buzzerPin, LOW);
+    delay(700);
+  }
 }
