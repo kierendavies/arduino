@@ -28,6 +28,7 @@ void loop() {
   for (byte i = 0; i < 7; i++) {
     module.setLED(frogs[i], i+1);
   }
+  checkWin();
   //controls
   byte buttons = module.getButtons();
   if (buttons & 1) {
@@ -67,4 +68,24 @@ void reset() {
   frogs[4] = GREEN;
   frogs[5] = GREEN;
   frogs[6] = GREEN;
+}
+
+void checkWin() {
+  if (frogs[0] == GREEN &&
+      frogs[1] == GREEN &&
+      frogs[2] == GREEN &&
+      frogs[3] == EMPTY &&
+      frogs[4] == RED &&
+      frogs[5] == RED &&
+      frogs[6] == RED) {
+    //win
+    for (int i = 0; i < 4; i++) {
+      delay(400);
+      module.setLEDs(0);
+      delay(400);
+      module.setLEDs(0x0ee0);
+    }
+    while (!(module.getButtons() & 1)) delay(10);
+    reset();
+  }
 }
